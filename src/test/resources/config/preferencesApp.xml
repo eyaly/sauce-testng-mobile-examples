@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Native Demo Suite" parallel="tests" thread-count="2" verbose="0">
+
+	<test name="iOS RDC Demo App" enabled="true">
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="automationName" value="XCuiTest"></parameter>
+		<parameter name="deviceName" value="iPhone.*"></parameter>
+		<parameter name="platformVersion" value="12"></parameter>
+		<parameter name="browserName" value="safari"></parameter>
+		<parameter name="cacheId" value="ios_app_new_123"></parameter>
+		<parameter name="noReset" value="true"></parameter>
+		<parameter name="autoAcceptAlerts" value="true"></parameter>
+<!--		<parameter name="deviceName" value="iPhone_SE_2020_14_POC02"></parameter>-->
+
+		<classes>
+			<class name="com.saucelabs.tests.ios.PreferencesTest">
+			</class>
+		</classes>
+	</test>
+</suite>

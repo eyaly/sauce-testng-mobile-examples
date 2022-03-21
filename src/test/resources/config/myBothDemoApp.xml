@@ -1,0 +1,73 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Native Demo Suite" parallel="tests" thread-count="2" verbose="0">
+
+
+	<test name="Android Emu Demo App" enabled="false">
+		<parameter name="platformName" value="android"></parameter>
+		<parameter name="automationName" value="UiAutomator2"></parameter>
+		<parameter name="appium:deviceName" value="Android GoogleAPI Emulator"></parameter>
+		<parameter name="appium:platformVersion" value="11"></parameter>
+		<parameter name="appium:app" value="storage:filename=mda-1.0.10-12.apk"></parameter>
+		<parameter name="appium:appWaitActivity" value="com.saucelabs.mydemoapp.android.view.activities.MainActivity"></parameter>
+<!--		<parameter name="sauce_appiumVersion" value="1.20.2"></parameter>-->
+		<classes>
+			<class name="com.saucelabs.tests.both.DemoTest">
+			</class>
+		</classes>
+	</test>
+
+	<test name="iOS Sim Demo App" enabled="false">
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="automationName" value="XCuiTest"></parameter>
+		<parameter name="appium:deviceName" value="iPhone X Simulator"></parameter>
+		<parameter name="appium:platformVersion" value="15"></parameter>
+		<parameter name="appium:app" value="storage:filename=SauceLabs-Demo-App.Simulator.zip"></parameter>
+<!--		<parameter name="sauce_appiumVersion" value="1.22.0"></parameter>-->
+		<classes>
+			<class name="com.saucelabs.tests.both.DemoTest">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Android RDC Demo App Staging" enabled="false">
+		<parameter name="platformName" value="android"></parameter>
+		<parameter name="automationName" value="UiAutomator2"></parameter>
+		<parameter name="appium:deviceName" value="Samsung.*"></parameter>
+<!--		<parameter name="appium:platformVersion" value="11"></parameter>-->
+		<parameter name="appium:app" value="storage:filename=mda-1.0.10-12.apk"></parameter>
+		<parameter name="appium:appWaitActivity" value="com.saucelabs.mydemoapp.android.view.activities.MainActivity"></parameter>
+		<parameter name="sauce_appiumVersion" value="2.0.0"></parameter>
+		<classes>
+			<class name="com.saucelabs.tests.both.DemoTest">
+			</class>
+		</classes>
+	</test>
+
+	<test name="iOS RDC Demo App " enabled="true">
+		<parameter name="platformName" value="iOS"></parameter>
+		<parameter name="automationName" value="XCuiTest"></parameter>
+		<parameter name="appium:deviceName" value="iPhone.*"></parameter>
+		<parameter name="appium:platformVersion" value="15"></parameter>
+		<parameter name="appium:app" value="storage:filename=SauceLabs-Demo-App.ipa"></parameter>
+<!--		<parameter name="sauce_appiumVersion" value="2.0.0"></parameter>-->
+		<classes>
+			<class name="com.saucelabs.tests.both.DemoTest">
+			</class>
+		</classes>
+	</test>
+
+	<test name="Android RDC Demo App" enabled="true">
+		<parameter name="platformName" value="android"></parameter>
+		<parameter name="automationName" value="UiAutomator2"></parameter>
+		<parameter name="deviceName" value="samsung.*"></parameter>
+		<parameter name="platformVersion" value="10"></parameter>
+		<parameter name="app" value="storage:filename=mda-1.0.10-12.apk"></parameter>
+		<parameter name="appWaitActivity" value="com.saucelabs.mydemoapp.android.view.activities.MainActivity"></parameter>
+<!--		<parameter name="appiumVersion" value="1.22.2"></parameter>-->
+		<classes>
+			<class name="com.saucelabs.tests.both.DemoTest">
+			</class>
+		</classes>
+	</test>
+
+</suite>
