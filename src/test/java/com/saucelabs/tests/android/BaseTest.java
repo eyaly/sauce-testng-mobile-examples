@@ -74,7 +74,7 @@ public class BaseTest {
 //            caps.setCapability("username", System.getenv("SAUCE_USERNAME"));
 //            caps.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
 
-            // W3C - not supported yet on RDC
+            // W3C
             sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
             sauceOptions.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
             sauceOptions.setCapability("name", methodName);
