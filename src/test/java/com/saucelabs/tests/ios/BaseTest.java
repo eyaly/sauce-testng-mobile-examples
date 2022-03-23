@@ -72,10 +72,6 @@ public class BaseTest {
                 }
             }
 
-//            caps.setCapability("name", methodName);
-//            caps.setCapability("username", System.getenv("SAUCE_USERNAME"));
-//            caps.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
-
             // W3C
             sauceOptions.setCapability("username", System.getenv("SAUCE_USERNAME"));
             sauceOptions.setCapability("accessKey", System.getenv("SAUCE_ACCESS_KEY"));
