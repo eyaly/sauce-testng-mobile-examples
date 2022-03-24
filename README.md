@@ -35,15 +35,14 @@ The structure of this file:
 * Each test contains set of parameter names and values
 * the parameter name is an Appium capability name. parameter name that start with `sauce_` will be added to the `sauce:options` capability
 * the parameter value is the value for the capability
-* Example: 
-The line
+* Example: The line
 `<parameter name="appium:deviceName" value="iPhone.*"></parameter>`
 will be translated to `caps.setCapability("appium:deviceName", "iPhone.*");`
 The line
 `<parameter name="sauce_cacheId" value="ios_app_new_123"></parameter>`
 will be translated to `sauceOptions.setCapability("cacheId", "ios_app_new_123");`
-* build capability. If there is no build caoability in the xml file, the code will look for system environment "BUILD_TAG". This environment can be used with CI tool to contain the job name and job number for example. 
-If there is no system environment "BUILD_TAG" - a random value will be created for the build capability. 
+* [build capability](https://docs.saucelabs.com/basics/test-config-annotation/test-annotation/#desired-capabilities-for-annotation). If there is no build capability in the xml file, the code will look for system environment `BUILD_TAG`. This environment can be used with CI tool to contain the job name and job number, for example. 
+If there is no system environment `BUILD_TAG` - a random value will be created for the build capability. 
 
 ### Execute the tests
 * The command line to run the tests
